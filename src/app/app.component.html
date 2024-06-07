@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="back-btn-wrapper">
+      <div class="back-btn" *ngIf="currentStep > 1" (click)="goToPrevious()">
+        &larr; Back
+      </div>
+    </div>
+
+    <div *ngIf="currentStep === 1 || currentStep === 2">
+      <app-select-country
+        (countryChange)="onCountryChange($event)"
+        [selectedCountry]="selectedCountry"
+      ></app-select-country>
+    </div>
+
+    <div *ngIf="currentStep === 2">
+      <app-document-list
+        [selectedCountry]="selectedCountry"
+        [documents]="documents"
+        (goToUploadDocument)="goToUploadDocument()"
+      ></app-document-list>
+    </div>
+
+    <div *ngIf="currentStep === 3">
+      <app-handle-document-upload
+        (changeStep)="changeStep($event)"
+      ></app-handle-document-upload>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.document-sample{    
+    width: 80px;    
+    aspect-ratio: 2;
+}
+.document-sample > img{
+    width: inherit;
+    object-fit: cover;
+}
+.document-container{
+    border: 1px solid rgb(180, 180, 180);
+    display: flex;    
+    gap: 10px;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 7px 0px;
+    cursor: pointer;
+}
+
+.document-container:hover{
+    background-color: rgba(234, 234, 234, 0.087);    
+}

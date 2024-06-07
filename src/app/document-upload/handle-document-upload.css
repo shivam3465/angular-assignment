@@ -1,0 +1,36 @@
+.document-upload-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.capture-video, .photo-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border: 1px solid rgb(220, 255, 232);
+  margin: 10px 0;
+}
+
+.image-upload-container h2 {
+  margin: 20px 0;
+}
+
+.button {
+  background-color: aquamarine;
+  color: black;
+  padding: 5px 0;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: 5px 5px 8px rgba(101, 101, 101, 0.267);
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.actions-container > button {
+  cursor: pointer;
+}
